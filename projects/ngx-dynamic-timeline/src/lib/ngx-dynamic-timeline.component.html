@@ -1,0 +1,17 @@
+<div class="c-timeline" *ngIf="groupedKeys && groupedItems && groupedKeys.length > 0">
+  <div class="c-timeline__keys" *ngFor="let key of groupedKeys; let i = index">
+    <div class="c-timeline__key">
+      <ng-container [ngTemplateOutlet]="timelineKey" [ngTemplateOutletContext]="{key: key}"></ng-container>
+
+      <div class="c-timeline__content-divider" *ngIf="i !== groupedKeys.length - 1">
+        <div class="c-timeline__divider"></div>
+      </div>
+    </div>
+
+    <div class="c-timeline__items" *ngIf="groupedItems[key] && groupedItems[key].length > 0">
+      <div class="c-timeline__item" *ngFor="let item of groupedItems[key]">
+        <ng-container [ngTemplateOutlet]="timelineValues" [ngTemplateOutletContext]="{item: item}"></ng-container>
+      </div>
+    </div>
+  </div>
+</div>

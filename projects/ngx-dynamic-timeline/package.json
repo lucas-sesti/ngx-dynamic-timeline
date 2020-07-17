@@ -1,0 +1,17 @@
+{
+  "name": "ngx-dynamic-timeline",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/animations": "~9.0.6",
+    "@angular/cdk": "~9.0.6",
+    "@angular/cli": "~9.0.6",
+    "@angular/common": "~9.0.6",
+    "@angular/core": "~9.0.6",
+    "@angular/material": "~9.0.6",
+    "@angular/material-moment-adapter": "~9.0.6",
+    "@angular/platform-browser": "~9.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

@@ -123,6 +123,50 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-dynamic-timeline"
+    },
+    "NgxDynamicTimeline": {
+      "projectType": "library",
+      "root": "projects/ngx-dynamic-timeline",
+      "sourceRoot": "projects/ngx-dynamic-timeline/src",
+      "prefix": "NgxDynamicTimeline",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-dynamic-timeline/tsconfig.lib.json",
+            "project": "projects/ngx-dynamic-timeline/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-dynamic-timeline/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-dynamic-timeline/src/test.ts",
+            "tsConfig": "projects/ngx-dynamic-timeline/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-dynamic-timeline/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-dynamic-timeline/tsconfig.lib.json",
+              "projects/ngx-dynamic-timeline/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-dynamic-timeline",
+  "cli": {
+    "analytics": "5d2e8f81-4d7b-481e-af7b-4dfcd785c765"
+  }
 }
